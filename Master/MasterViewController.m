@@ -8,8 +8,12 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "TheamManager.h"
+#import "macro.h"
+#import "UIColor+HexString.h"
 
 @interface MasterViewController ()
+
 
 @property NSMutableArray *objects;
 @end
@@ -26,6 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSDictionary *dictTabelView= [[TheamManager sharedManager].dictColor objectForKey:@"TabelView"] ;
+    
+    
+    NSString *strClrHexValue=[dictTabelView valueForKey:@"tabelBackgroungClr"];
+    
+    self.tableView.backgroundColor=[UIColor colorWithHexString:strClrHexValue];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -71,11 +82,25 @@
     return self.objects.count;
 }
 
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     NSDictionary *dictTabelView= [[TheamManager sharedManager].dictColor objectForKey:@"TabelView"] ;
+    
+    
+    NSString *strClrHexValue=[dictTabelView valueForKey:@"cellBackgroundClr"];
+  
+    cell.backgroundColor=[UIColor colorWithHexString:strClrHexValue];
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = [object description];
+    
+    DLog(@"dict");
     return cell;
 }
 

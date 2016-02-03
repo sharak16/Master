@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>uiView</key>
+	<dict>
+		<key>viewBackground</key>
+		<string>RED</string>
+	</dict>
+	<key>TabelView</key>
+	<dict>
+		<key>tabelBackgroungClr</key>
+		<string>#ad9999</string>
+		<key>cellBackgroundClr</key>
+		<string>#e15353</string>
+	</dict>
+</dict>
+</plist>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14BBAAC41C58C26C003FF0FE /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14BBAAC31C58C26C003FF0FE /* colors.plist */; };
+		14BBAAC81C58C324003FF0FE /* TheamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BBAAC71C58C324003FF0FE /* TheamManager.m */; };
+		14F231231C59F3230074DA27 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F231221C59F3230074DA27 /* UIColor+HexString.m */; };
 		14FC81FB1C5233050087C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC81FA1C5233050087C45C /* main.m */; };
 		14FC81FE1C5233050087C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC81FD1C5233050087C45C /* AppDelegate.m */; };
 		14FC82011C5233050087C45C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC82001C5233050087C45C /* MasterViewController.m */; };
@@ -28,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14BBAAC31C58C26C003FF0FE /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
+		14BBAAC61C58C324003FF0FE /* TheamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheamManager.h; sourceTree = "<group>"; };
+		14BBAAC71C58C324003FF0FE /* TheamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheamManager.m; sourceTree = "<group>"; };
+		14BBAACB1C58F380003FF0FE /* macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
+		14F231211C59F3230074DA27 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "Master/UIColor+HexString.h"; sourceTree = "<group>"; };
+		14F231221C59F3230074DA27 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "Master/UIColor+HexString.m"; sourceTree = "<group>"; };
 		14FC81F51C5233050087C45C /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FC81F91C5233050087C45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14FC81FA1C5233050087C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,9 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14BBAAC21C58C234003FF0FE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				14BBAAC31C58C26C003FF0FE /* colors.plist */,
+				14F231211C59F3230074DA27 /* UIColor+HexString.h */,
+				14F231221C59F3230074DA27 /* UIColor+HexString.m */,
+				14BBAACB1C58F380003FF0FE /* macro.h */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		14BBAAC51C58C2ED003FF0FE /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				14BBAAC61C58C324003FF0FE /* TheamManager.h */,
+				14BBAAC71C58C324003FF0FE /* TheamManager.m */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
 		14FC81EC1C5233050087C45C = {
 			isa = PBXGroup;
 			children = (
+				14BBAAC51C58C2ED003FF0FE /* Singleton */,
+				14BBAAC21C58C234003FF0FE /* Resource */,
 				14FC81F71C5233050087C45C /* Master */,
 				14FC82141C5233050087C45C /* MasterTests */,
 				14FC81F61C5233050087C45C /* Products */,
@@ -204,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BBAAC41C58C26C003FF0FE /* colors.plist in Resources */,
 				14FC82071C5233050087C45C /* Main.storyboard in Resources */,
 				14FC820C1C5233050087C45C /* LaunchScreen.xib in Resources */,
 				14FC82091C5233050087C45C /* Images.xcassets in Resources */,
@@ -224,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F231231C59F3230074DA27 /* UIColor+HexString.m in Sources */,
 				14FC81FE1C5233050087C45C /* AppDelegate.m in Sources */,
+				14BBAAC81C58C324003FF0FE /* TheamManager.m in Sources */,
 				14FC82011C5233050087C45C /* MasterViewController.m in Sources */,
 				14FC81FB1C5233050087C45C /* main.m in Sources */,
 				14FC82041C5233050087C45C /* DetailViewController.m in Sources */,
@@ -424,6 +458,7 @@
 				14FC821D1C5233050087C45C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14FC821E1C5233050087C45C /* Build configuration list for PBXNativeTarget "MasterTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +467,7 @@
 				14FC82201C5233050087C45C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
