@@ -13,7 +13,7 @@
 #import "UIColor+HexString.h"
 
 @interface MasterViewController ()
-
+@property(nonatomic)int sum ;
 
 @property NSMutableArray *objects;
 @end
@@ -48,6 +48,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    int a = 5;
+    int b = 10;
+    
+    self.sum = a + b;
+    
+    NSLog(@"The result is: %d", self.sum);
 }
 
 - (void)insertNewObject:(id)sender {
@@ -117,5 +124,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+
+
 
 @end
